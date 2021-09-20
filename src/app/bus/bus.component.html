@@ -1,0 +1,8 @@
+
+<input [(ngModel)]=inputText>
+{{men | json}}
+ <br>
+ <h1>msgs from child</h1>
+ <p *ngFor="let msg of dataArr" > {{msg}}</p>
+ <button (click)='addMan()'>Add Person</button> 
+ <app-man *ngFor='let x of men' [manName]=x (uploadData)=getDataFromChild($event)> </app-man> 
